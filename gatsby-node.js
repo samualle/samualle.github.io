@@ -5,7 +5,7 @@ const config = require('./config/SiteConfig').default;
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'MarkdownRemark' && _.has(node, 'frontmatter') && _.has(node.frontmatter, 'title')) {
-    const slug = `${_.kebabCase(node.frontmatter.title)}`;
+    const slug = `${_.kebabCase(node.frontmatter.path || node.frontmatter.title)}`;
     createNodeField({ node, name: 'slug', value: slug });
   }
 };
@@ -150,10 +150,10 @@ exports.createPages = ({ actions, graphql }) => {
       const prev = index === posts.length - 1 ? null : posts[index + 1].node;
 
       createPage({
-                   path: `/blog/${_.kebabCase(node.frontmatter.title)}`,
+                   path: `/blog/${_.kebabCase(node.frontmatter.path || node.frontmatter.title)}`,
                    component: postTemplate,
                    context: {
-                     slug: _.kebabCase(node.frontmatter.title),
+                     slug: _.kebabCase(node.frontmatter.path || node.frontmatter.title),
                      prev,
                      next,
                    },
