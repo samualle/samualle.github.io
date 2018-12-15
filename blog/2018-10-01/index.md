@@ -1,4 +1,5 @@
 ---
+path: "test title for this is a paragraph"
 date: "2018-01-01"
 title: "Test Title For This is a paragraph"
 category: "General"

@@ -1,4 +1,5 @@
 ---
+path: "coding is fun is not it"
 date: "2018-01-05"
 title: "Coding is fun, isn't it?"
 category: "Coding"

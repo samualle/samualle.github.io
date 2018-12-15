@@ -1,4 +1,5 @@
 ---
+path: "a title must be meaningful"
 date: "2018-01-03"
 title: "A title must be meaningful"
 category: "Coding"

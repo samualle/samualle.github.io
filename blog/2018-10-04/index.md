@@ -1,4 +1,5 @@
 ---
+path: "listen to music to enjoy coding"
 date: "2018-01-04"
 title: "Listen to music to enjoy coding"
 category: "Music"

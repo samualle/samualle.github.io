@@ -1,4 +1,5 @@
 ---
+path: "alper musig clare is a create author"
 date: "2018-01-02"
 title: "Alper Musig Clare is a create author"
 category: "Technology"
