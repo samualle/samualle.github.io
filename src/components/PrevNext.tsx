@@ -45,14 +45,14 @@ export class PrevNext extends React.PureComponent<Props> {
       <Wrapper>
         {prev && (
           <Prev>
-            <span>Previous</span>
-            <Link to={`/blog/${kebabCase(prev.frontmatter.title)}`}>{prev.frontmatter.title}</Link>
+            <span>上一篇</span>
+            <Link to={`/blog/${kebabCase(prev.frontmatter.path || prev.frontmatter.title)}`}>{prev.frontmatter.title}</Link>
           </Prev>
         )}
         {next && (
           <Next>
-            <span>Next</span>
-            <Link to={`/blog/${kebabCase(next.frontmatter.title)}`}>{next.frontmatter.title}</Link>
+            <span>下一篇</span>
+            <Link to={`/blog/${kebabCase(next.frontmatter.path || next.frontmatter.title)}`}>{next.frontmatter.title}</Link>
           </Next>
         )}
       </Wrapper>

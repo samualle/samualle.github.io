@@ -99,7 +99,7 @@ export class Pagination extends React.PureComponent<Props> {
         <PaginationContent>
           {!isFirst && (
             <Link className="prev page-numbers" to={prevPage} rel="prev">
-              ← Prev
+              ← 上一页
             </Link>
           )}
           {Array.from({ length: totalPages }, (_, i) => (
@@ -113,7 +113,7 @@ export class Pagination extends React.PureComponent<Props> {
           ))}
           {!isLast && (
             <Link className="next page-numbers" to={nextPage} rel="next">
-              Next →
+              下一页 →
             </Link>
           )}
         </PaginationContent>

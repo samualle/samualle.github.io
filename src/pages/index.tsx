@@ -68,16 +68,16 @@ export default class IndexPage extends React.Component<PageProps> {
               <HomepageContent center={true}>
                 <img src={config.siteLogo} />
                 <h1>
-                  Hi. I am <br />
-                  Majid Hajian
+                  Hi. 我是 <br />
+                  王帅兵
                 </h1>
-                <p>I write about JavaScript, Angular, Ember, React, Vue, GlimmerJs, NodeJs, Rails, Go, Gatsby and ...</p>
+                <p>我从事 JavaScript 相关的开发，包括 React，Vue，等等……</p>
                 <Link to="/contact">
                   <Button big={true}>
                     <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1764 11q33 24 27 64l-256 1536q-5 29-32 45-14 8-31 8-11 0-24-5l-453-185-242 295q-18 23-49 23-13 0-22-4-19-7-30.5-23.5t-11.5-36.5v-349l864-1059-1069 925-395-162q-37-14-40-55-2-40 32-59l1664-960q15-9 32-9 20 0 36 11z" />
                     </svg>
-                    Contact
+                    联系方式
                   </Button>
                 </Link>
                 <Link to="/blog">
@@ -85,21 +85,20 @@ export default class IndexPage extends React.Component<PageProps> {
                     <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1764 11q33 24 27 64l-256 1536q-5 29-32 45-14 8-31 8-11 0-24-5l-453-185-242 295q-18 23-49 23-13 0-22-4-19-7-30.5-23.5t-11.5-36.5v-349l864-1059-1069 925-395-162q-37-14-40-55-2-40 32-59l1664-960q15-9 32-9 20 0 36 11z" />
                     </svg>
-                    Blog
+                    博客
                   </Button>
                 </Link>
               </HomepageContent>
             </GridRow>
             <GridRow>
               <HomepageContent>
-                <h2>About Me</h2>
+                <h2>关于我</h2>
                 <p>
-                  Though I am a results-driven front-end developer by day who have converted inactive designs to fully interactive,
-                  well-developed, accessible and standards-based user interfaces. I am completely enthusiast with a full stack environment
-                  and passionate about JavaScript world.
+                  我是一个因工作原因，而从后端转为前端的开发者，一直做的是 React
+                  技术相关的项目。随着工作的深入，和自我钻研的深入，渐渐的喜欢上了前端，决定沿着 JavaScript 的发展一路走下去。
                 </p>
                 <hr />
-                <h2>Latest Blog</h2>
+                <h2>最近一篇博客</h2>
                 {edges.map(post => (
                   <Article
                     title={post.node.frontmatter.title}
@@ -112,7 +111,7 @@ export default class IndexPage extends React.Component<PageProps> {
                   />
                 ))}
                 <p className={'textRight'}>
-                  <Link to={'/blog'}>All articles ({totalCount})</Link>
+                  <Link to={'/blog'}>所有文章 ({totalCount})</Link>
                 </p>
               </HomepageContent>
             </GridRow>
