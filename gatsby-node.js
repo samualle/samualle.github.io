@@ -5,7 +5,7 @@ const config = require('./config/SiteConfig').default;
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'MarkdownRemark' && _.has(node, 'frontmatter') && _.has(node.frontmatter, 'title')) {
-    const slug = `${_.kebabCase(node.frontmatter.title)}`;  //test
+    const slug = `${_.kebabCase(node.frontmatter.title)}`;
     createNodeField({ node, name: 'slug', value: slug });
   }
 };
@@ -109,6 +109,7 @@ exports.createPages = ({ actions, graphql }) => {
             slug
           }
           frontmatter {
+            path
             date
             title
             category
